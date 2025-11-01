@@ -1,15 +1,40 @@
 {
     "name": "contact-form",
     "packageManager": "yarn@4.6.0",
+    "markdown": "github",
+    "keywords": [
+        "HTML",
+        "CSS",
+        "SCSS",
+        "JS"
+    ],
+    "license": "MIT",
+    "type": "module",
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://opensource.org/license/mit/"
+        }
+    ],
+    "author": "Khaled Mohamed <k.mohamed.11.98@gmail.com> (https://github.com/krypton225)",
+    "contributors": [
+        "Khaled Mohamed"
+    ],
     "scripts": {
-        "dev": "concurrently \"yarn less:watch\" \"yarn server\"",
+        "dev": "concurrently \"yarn less:watch\" \"yarn server\" \"yarn wbp:watch\"",
         "server": "live-server ./",
-        "less:watch": "chokidar 'src/less/**/*.less' -c 'lessc src/less/index.less dist/index.css'"
+        "less:watch": "chokidar 'src/less/**/*.less' -c 'lessc src/less/index.less dist/index.css'",
+        "wbp:watch": "webpack --mode=development --watch",
+        "wbp:production": "webpack --mode=production",
+        "upgrade": "ncu --upgrade",
+        "tags": "git push repo --tags"
     },
     "devDependencies": {
         "chokidar-cli": "^3.0.0",
         "concurrently": "^9.2.1",
         "less": "^4.4.2",
-        "live-server": "^1.2.2"
+        "live-server": "^1.2.2",
+        "webpack": "^5.102.1",
+        "webpack-cli": "^6.0.1"
     }
 }
