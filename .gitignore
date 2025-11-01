@@ -24,7 +24,5 @@ node_modules
 !.yarn/sdks
 !.yarn/versions
 
-/dist
-
 /.vscode/*
 !.vscode/settings.json
