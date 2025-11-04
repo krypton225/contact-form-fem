@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+@layer base {
+    :root {
+        --green-200: hsl(148, 38%, 91%);
+        --green-600: hsl(169, 82%, 27%);
+        --danger: hsl(0, 66%, 54%);
+
+        --white: hsl(0, 0%, 100%);
+        --grey-500: hsl(186, 15%, 59%);
+        --grey-900: hsl(187, 24%, 22%);
+    }
+
+    :root {
+        --ff: "Karla", sans-serif;
+
+        --fs-1: clamp(0.625rem, 0.55rem + 0.25vw, 0.75rem);
+        --fs-2: clamp(0.75rem, 0.675rem + 0.25vw, 0.875rem);
+        --fs-3: clamp(0.875rem, 0.8rem + 0.25vw, 1rem);
+        --fs-4: clamp(1rem, 0.925rem + 0.25vw, 1.125rem);
+        --fs-5: clamp(1.125rem, 1.05rem + 0.25vw, 1.25rem);
+        --fs-6: clamp(1.8125rem, 2rem + -0.625vw, 1.5rem);
+
+        --fw-100: 100;
+        --fw-200: 200;
+        --fw-300: 300;
+        --fw-400: 400;
+        --fw-500: 500;
+        --fw-600: 600;
+        --fw-700: 700;
+    }
+
+    body {
+        background-color: var(--green-200);
+
+        font-family: var(--ff);
+    }
+}
