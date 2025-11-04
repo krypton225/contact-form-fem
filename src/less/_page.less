@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+@layer page {
+    .main-app {
+        min-block-size: 100dvh;
+
+        display: grid;
+        place-items: center;
+    }
+
+    .p-contact-us {
+        min-inline-size: min(calc(100% - 2rem), 42.5rem);
+
+        border-radius: 0.5rem;
+
+        margin-inline: auto;
+
+        padding-block: 1.25rem;
+        padding-inline: 1.5rem;
+
+        background-color: var(--white);
+
+        &__title {
+            font-size: var(--fs-6);
+            font-weight: var(--fw-500);
+
+            text-transform: capitalize;
+        }
+
+        &__content {
+            --gap: 1rem;
+
+            margin-block-start: var(--gap);
+
+            display: flex;
+            flex-direction: column;
+            gap: var(--gap);
+        }
+
+        &__name-container {
+            display: flex;
+            gap: var(--gap);
+
+            & > * {
+                flex-grow: 1;
+            }
+        }
+    }
+}
