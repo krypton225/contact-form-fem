@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+@layer component {
+    .c-button {
+        --user-select: none;
+
+        padding-block: 0.35rem;
+        padding-inline: 1.5rem;
+
+        border-radius: 0.35rem;
+        border: none;
+
+        font-size: var(--fs-3);
+        font-family: var(--ff);
+        font-weight: var(--fw-300);
+
+        text-transform: capitalize;
+
+        -webkit-user-select: var(--user-select);
+        -moz-user-select: var(--user-select);
+        -ms-user-select: var(--user-select);
+        user-select: var(--user-select);
+
+        cursor: pointer;
+
+        transition: opacity 0.35s ease-in-out;
+
+        &.is-primary {
+            background-color: var(--green-600);
+            color: var(--white);
+
+            @media (hover: hover) {
+                &:hover {
+                    opacity: 0.85;
+                }
+            }
+        }
+    }
+}
+
