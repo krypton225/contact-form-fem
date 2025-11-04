@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+@layer component {
+    .c-input {
+        display: flex;
+
+        &.is-column {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        &.is-row {
+            flex-direction: row;
+        }
+
+        &__label {
+            font-size: var(--fs-2);
+
+            text-transform: capitalize;
+
+            color: var(--grey-900);
+        }
+
+        &__star {
+            color: var(--green-600);
+        }
+
+        &__inner {
+            border-radius: 0.35rem;
+            border: 1px solid var(--grey-500);
+
+            overflow: hidden;
+        }
+
+        &__field {
+            width: 100%;
+
+            padding-block: 0.35rem;
+            padding-inline: 0.35rem;
+
+            border: 0;
+
+            font-family: var(--ff);
+
+            &:focus-visible {
+                outline: 0;
+            }
+
+            &.is-textarea {
+                min-block-size: 8rem;
+                max-block-size: 15rem;
+
+                resize: none;
+            }
+        }
+    }
+}
