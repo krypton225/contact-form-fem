@@ -458,6 +458,42 @@
   }
 }
 @layer component {
+  .c-radio {
+    --radius: 0.35rem;
+    border-radius: var(--radius);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .c-radio:has(.c-radio__container > .c-radio__input:checked) {
+    background-color: var(--green-200);
+  }
+  .c-radio__container {
+    flex-grow: 1;
+    padding-block: 0.5rem;
+    padding-inline: 0.75rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--grey-500);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .c-radio__input {
+    --size: 1rem;
+    inline-size: var(--size);
+    block-size: var(--size);
+    border: 1.5px solid var(--grey-500);
+    border-radius: 50%;
+    accent-color: var(--green-600);
+  }
+  .c-radio__text {
+    font-size: var(--fs-2);
+    text-transform: capitalize;
+  }
+}
+@layer component {
   .c-button {
     --user-select: none;
     padding-block: 0.35rem;
@@ -517,6 +553,25 @@
   }
   .p-contact-us__name-container > * {
     flex-grow: 1;
+  }
+}
+@layer utilities {
+  .u-d-flex {
+    display: flex;
+  }
+  .u-dir-col {
+    flex-direction: column;
+  }
+  @media (min-width: 576px) {
+    .u-min-md-row {
+      flex-direction: row;
+    }
+  }
+  .u-gap-1 {
+    gap: 1rem;
+  }
+  .u-w-100 {
+    width: 100%;
   }
 }
 @layer reset-zone, base, component, page, utils;

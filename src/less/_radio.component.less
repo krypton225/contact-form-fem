@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+@layer component {
+    .c-radio {
+        --radius: 0.35rem;
+
+        border-radius: var(--radius);
+
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        &:has(.c-radio__container > .c-radio__input:checked) {
+            background-color: var(--green-200);
+        }
+
+        &__container {
+            flex-grow: 1;
+
+            padding-block: 0.5rem;
+            padding-inline: 0.75rem;
+
+            border-radius: var(--radius);
+            border: 1px solid var(--grey-500);
+
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+
+            overflow: hidden;
+
+            cursor: pointer;
+        }
+
+        &__input {
+            --size: 1rem;
+
+            inline-size: var(--size);
+            block-size: var(--size);
+
+            border: 1.5px solid var(--grey-500);
+            border-radius: 50%;
+
+            accent-color: var(--green-600);
+        }
+
+        &__text {
+            font-size: var(--fs-2);
+
+            text-transform: capitalize;
+        }
+    }
+}
