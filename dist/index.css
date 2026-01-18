@@ -415,9 +415,6 @@
     text-transform: capitalize;
     color: var(--grey-900);
   }
-  .c-input__star {
-    color: var(--green-600);
-  }
   .c-input__inner {
     border-radius: 0.35rem;
     border: 1px solid var(--grey-500);
@@ -569,6 +566,9 @@
   }
   .u-w-100 {
     width: 100%;
+  }
+  .u-star {
+    color: var(--green-600);
   }
 }
 @layer reset-zone, base, component, page, utils;
