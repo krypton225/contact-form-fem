@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+@layer component {
+    .c-checkbox {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        cursor: pointer;
+
+        &__input {
+            --size: 1rem;
+
+            inline-size: var(--size);
+            block-size: var(--size);
+
+            border: 1.5px solid var(--grey-500);
+            border-radius: 0.125rem;
+        }
+
+        &__text {
+            font-size: var(--fs-2);
+        }
+    }
+}
